@@ -7,7 +7,7 @@ const resetbtn=document.querySelector(".reset");
 async function checkweather(city){
     const response=await fetch(apiUrl+city+`&appid=${apiKey}`);
     let data=await response.json();//Javascript Object Notation
-    console.log(data);
+    //console.log(data);
 
     document.querySelector(".city").innerHTML = data.name;
     document.querySelector(".temp").innerHTML = Math.round(data.main.temp)+ "°c";
